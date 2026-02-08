@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "74789784936",
+    "project_id": "fluttergames-da248",
+    "storage_bucket": "fluttergames-da248.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:74789784936:android:c369e775ee8a0f05dc1add",
+        "android_client_info": {
+          "package_name": "com.example.fl_crud_videojuegos_dpg"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVtjVNBo854-eH1btShG3IFVYjm-q7hRs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:74789784936:android:008921cb4fd9abe0dc1add",
+        "android_client_info": {
+          "package_name": "com.example.fl_videojuegos_dpg"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVtjVNBo854-eH1btShG3IFVYjm-q7hRs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
