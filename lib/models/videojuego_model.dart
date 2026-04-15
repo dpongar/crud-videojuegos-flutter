@@ -4,6 +4,7 @@
     final String plataforma;
     final double precio;
     final String descripcion;
+    final String imagenUrl;
 
     Videojuego({
       required this.id,
@@ -11,6 +12,7 @@
       required this.plataforma,
       required this.precio,
       required this.descripcion,
+      required this.imagenUrl,
     });
 
     factory Videojuego.fromMap(String id, Map<String, dynamic> data) {
@@ -20,6 +22,7 @@
         plataforma: data['plataforma'],
         precio: (data['precio'] as num).toDouble(),
         descripcion: data['descripcion'],
+        imagenUrl: data['imagenUrl'],
       );
     }
 
@@ -29,6 +32,7 @@
         'plataforma': plataforma,
         'precio': precio,
         'descripcion': descripcion,
+        'imagenUrl': imagenUrl,
       };
     }
   }

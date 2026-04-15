@@ -20,6 +20,7 @@ class _UpdateScreenState extends State<UpdateScreen> {
   final plataformaCtrl = TextEditingController();
   final precioCtrl = TextEditingController();
   final descripcionCtrl = TextEditingController();
+  final imagenCtrl = TextEditingController();
 
   @override
   void didChangeDependencies() {
@@ -30,6 +31,7 @@ class _UpdateScreenState extends State<UpdateScreen> {
     plataformaCtrl.text = v.plataforma;
     precioCtrl.text = v.precio.toString();
     descripcionCtrl.text = v.descripcion;
+    imagenCtrl.text = v.imagenUrl;
   }
 
   @override
@@ -44,26 +46,45 @@ class _UpdateScreenState extends State<UpdateScreen> {
             children: [
               CustomInput(controller: tituloCtrl, label: 'Título'),
               CustomInput(controller: plataformaCtrl, label: 'Plataforma'),
-              CustomInput(controller: precioCtrl, label: 'Precio', isNumber: true),
+              CustomInput(
+                controller: precioCtrl,
+                label: 'Precio',
+                isNumber: true,
+              ),
               CustomInput(controller: descripcionCtrl, label: 'Descripción'),
+              CustomInput(controller: imagenCtrl, label: 'URL Imagen'),
               const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () async {
                   if (_formKey.currentState!.validate()) {
-                    final updated = Videojuego(
-                      id: v.id,
-                      titulo: tituloCtrl.text,
-                      plataforma: plataformaCtrl.text,
-                      precio: double.parse(precioCtrl.text),
-                      descripcion: descripcionCtrl.text,
-                    );
+                    try {
+                      final updated = Videojuego(
+                        id: v.id,
+                        titulo: tituloCtrl.text,
+                        plataforma: plataformaCtrl.text,
+                        precio: double.parse(
+                          precioCtrl.text.replaceAll(',', '.'),
+                        ),
+                        descripcion: descripcionCtrl.text,
+                        imagenUrl: imagenCtrl.text,
+                      );
 
-                    await _service.updateVideojuego(v.id, updated);
-                    Navigator.pop(context);
+                      await _service.updateVideojuego(v.id, updated);
+
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(content: Text("Videojuego actualizado")),
+                      );
+
+                      Navigator.pop(context);
+                    } catch (e) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(content: Text("Error al actualizar: $e")),
+                      );
+                    }
                   }
                 },
                 child: const Text('Actualizar'),
-              )
+              ),
             ],
           ),
         ),
@@ -71,4 +92,3 @@ class _UpdateScreenState extends State<UpdateScreen> {
     );
   }
 }
-

@@ -41,48 +41,47 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCI6K802NDgqVkY0S2AYS_XsUeFixVJQD4',
-    appId: '1:74789784936:web:4fd77ea15ff32528dc1add',
-    messagingSenderId: '74789784936',
-    projectId: 'fluttergames-da248',
-    authDomain: 'fluttergames-da248.firebaseapp.com',
-    storageBucket: 'fluttergames-da248.firebasestorage.app',
-    measurementId: 'G-F6M4856EXM',
+    apiKey: 'AIzaSyDEKGLv9GE_JIQqHwzU8geQ0qTUDT9tFkI',
+    appId: '1:382578261018:web:768fb8b70339e6ed5ae5a3',
+    messagingSenderId: '382578261018',
+    projectId: 'crud-videojuegos-final',
+    authDomain: 'crud-videojuegos-final.firebaseapp.com',
+    storageBucket: 'crud-videojuegos-final.firebasestorage.app',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDVtjVNBo854-eH1btShG3IFVYjm-q7hRs',
-    appId: '1:74789784936:android:c369e775ee8a0f05dc1add',
-    messagingSenderId: '74789784936',
-    projectId: 'fluttergames-da248',
-    storageBucket: 'fluttergames-da248.firebasestorage.app',
+    apiKey: 'AIzaSyB-awcH_E26_pbdtnEpBnFfp8XMUW3lJaU',
+    appId: '1:382578261018:android:72c1dc17349bd7b75ae5a3',
+    messagingSenderId: '382578261018',
+    projectId: 'crud-videojuegos-final',
+    storageBucket: 'crud-videojuegos-final.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyA2GX9ymE97pi6zfRCGkxkXf_ePustvZMQ',
-    appId: '1:74789784936:ios:44dc4ee38c38f57adc1add',
-    messagingSenderId: '74789784936',
-    projectId: 'fluttergames-da248',
-    storageBucket: 'fluttergames-da248.firebasestorage.app',
+    apiKey: 'AIzaSyCkSDCjYy9pAeyByqegeCtZ4pwAdeS4wXk',
+    appId: '1:382578261018:ios:d7e994e36c4b3a845ae5a3',
+    messagingSenderId: '382578261018',
+    projectId: 'crud-videojuegos-final',
+    storageBucket: 'crud-videojuegos-final.firebasestorage.app',
     iosBundleId: 'com.example.flCrudVideojuegosDpg',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyA2GX9ymE97pi6zfRCGkxkXf_ePustvZMQ',
-    appId: '1:74789784936:ios:44dc4ee38c38f57adc1add',
-    messagingSenderId: '74789784936',
-    projectId: 'fluttergames-da248',
-    storageBucket: 'fluttergames-da248.firebasestorage.app',
+    apiKey: 'AIzaSyCkSDCjYy9pAeyByqegeCtZ4pwAdeS4wXk',
+    appId: '1:382578261018:ios:d7e994e36c4b3a845ae5a3',
+    messagingSenderId: '382578261018',
+    projectId: 'crud-videojuegos-final',
+    storageBucket: 'crud-videojuegos-final.firebasestorage.app',
     iosBundleId: 'com.example.flCrudVideojuegosDpg',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyCI6K802NDgqVkY0S2AYS_XsUeFixVJQD4',
-    appId: '1:74789784936:web:5fc362c2e968a5a4dc1add',
-    messagingSenderId: '74789784936',
-    projectId: 'fluttergames-da248',
-    authDomain: 'fluttergames-da248.firebaseapp.com',
-    storageBucket: 'fluttergames-da248.firebasestorage.app',
-    measurementId: 'G-P79X2KSEJ9',
+    apiKey: 'AIzaSyDEKGLv9GE_JIQqHwzU8geQ0qTUDT9tFkI',
+    appId: '1:382578261018:web:fc103190f1cf2dbb5ae5a3',
+    messagingSenderId: '382578261018',
+    projectId: 'crud-videojuegos-final',
+    authDomain: 'crud-videojuegos-final.firebaseapp.com',
+    storageBucket: 'crud-videojuegos-final.firebasestorage.app',
   );
+
 }

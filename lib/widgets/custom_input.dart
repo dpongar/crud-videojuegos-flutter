@@ -18,15 +18,23 @@ class CustomInput extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 12),
       child: TextFormField(
         controller: controller,
-        keyboardType: isNumber ? TextInputType.number : TextInputType.text,
+        keyboardType: isNumber
+            ? const TextInputType.numberWithOptions(decimal: true)
+            : TextInputType.text,
         decoration: InputDecoration(labelText: label),
         validator: (value) {
           if (value == null || value.isEmpty) {
             return 'Campo obligatorio';
           }
-          if (isNumber && double.tryParse(value) == null) {
-            return 'Debe ser un número';
+
+          if (isNumber) {
+            final normalized = value.replaceAll(',', '.');
+
+            if (double.tryParse(normalized) == null) {
+              return 'Debe ser un número válido (ej: 19,99)';
+            }
           }
+
           return null;
         },
       ),
